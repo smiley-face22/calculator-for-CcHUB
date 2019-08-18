@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scientific calculator</title>
+</head>
+
+<!-- styling for the calculator starts here -->
+<style>
+    body {
+        text-align: center;
+        background-color: #f2f2f2;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Georgia;
+    }
+
+    .cal {
+        background: lightgrey;
+        width: 400px;
+        height: 450px;
+        border-radius: 6px;
+        text-align: center;   
+        font-family: Georgia;
+
+
+    }
+
+    .calc {
+        background: lightgrey;
+        width: 400px;
+        height: 500px;
+        border-radius: 6px solid black;
+        text-align: center;
+        opacity: transparent;
+        font-family: Georgia;
+    }
+
+    #display {
+        height: 40px;
+        width: 300px;
+        margin-top: 3em;
+        margin-bottom: 15px;
+        border: 3px solid black;
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        text-align: right;
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 4px;
+        border-radius: 4px;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+
+    }
+
+    .butt {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-shadow: -1px 0 #FFFFFF, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        background-color: black;
+        border-radius: 50%;
+        transition: .5s;
+        border-color: #f2f2f2;
+    }
+
+    .equal {
+        width: 107px;
+        height: 50px;
+        border-radius: 4px;
+        text-shadow: -1px 0 #FFFFFF, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        background-color: red;
+    }
+
+    .btne {
+        width: 50px;
+        height: 50px;
+        padding: 6px 12px;
+        font-weight: bold;
+        border-radius: 50%;
+        text-shadow: -1px 0 #FFFFFF, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        background-color: black;
+        border-radius: 50%;
+        border-color: #f3e5e5;
+        margin-bottom: 5px;
+    }
+
+    .btn:hover {
+        background-color: darkgray;
+        color: rgb(9, 4, 32);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .butt:hover {
+        background-color: lightskyblue;
+        color: rgb(9, 4, 32);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .equal:hover {
+        background-color: rgb(154, 168, 154);
+        color: rgb(9, 4, 32);
+        box-shadow: 0 2px 5px #b8b8b8e0;
+
+    }
+</style>
+<!-- styling for the calculator ends here -->
+
+<body>
+    
+<!-- main body elements of the calculator begins here -->
+    <div class="cal">
+        <div class="display">
+            <input type="text" name="" id="display" disabled>
+
+            <div class="btns">
+                <button class="btne" onclick="sin()"> SIN</button>
+                <button class="btne" onclick="cos()">COS</button>
+                <button class="btne" onclick="tan()">TAN</button>
+                <button class="butt" onclick="clr('s')">AC</button>
+                <button class="butt" onclick="delt()">Del</button>
+
+                <!-- <input type='button' value='C' id='butt' onclick='clr("s")'>&nbsp;
+                <input type='button' value='DEL' id='butt' onclick='dl()'> -->
+                <br>
+
+                <button class="btn" onclick="shownum('7')">7</button>
+                <button class="btn" onclick="shownum('8')">8</button>
+                <button class="btn" onclick="shownum('9')">9</button>
+                <button class="butt" onclick="shownum('+')">+</button>
+                <button class="butt" onclick="shownum('-')">-</button>
+                <br>
+
+                <button class="btn" onclick="shownum('4')">4</button>
+                <button class="btn" onclick="shownum('5')">5</button>
+                <button class="btn" onclick="shownum('6')">6</button>
+                <button class="butt" onclick="shownum('*')">*</button>
+                <button class="butt" onclick="shownum('/')">/</button>
+                <br>
+
+                <button class="btn" onclick="shownum('1')">1</button>
+                <button class="btn" onclick="shownum('2')">2</button>
+                <button class="btn" onclick="shownum('3')">3</button>
+                <button class="butt" onclick="shownum('sqrt')">Sqrt</button>
+                <button class="butt" onclick="shownum('sq')">Sq</button>
+                <br>
+
+                <button class="btn" onclick="shownum('0')">0</button>
+                <button class="btn" onclick="shownum('00')">00</button>
+                <button class="btn" onclick="shownum('.')">.</button>
+                <button class="equal" onclick="equal()">=</button>
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+   
+<script src="cal.js"></script>
+</body>
+
+</html>
